@@ -16,7 +16,7 @@
         <script src="assets/scripts.js"></script>
         <title>Vapor - <?=$titulo_pagina?></title>
     </head>
-    <body>
+    <body onload="removeErrorMensagem()">
         <div id="cont-dashboard">
             <?php require('./modulos/side-menu.php')?>
             <div id="sub-dashboard">
@@ -25,7 +25,7 @@
                 $query_categoria = mysqli_query($conn, $id_categoria);
                 ?>
                 <?php if($error != null){?>
-                    <div class="error"><?=$error?></div>
+                    <div class="error" ><?=$error?></div>
                 <?php } ?>
                 <div class="forms">
                     <form action="cadastro-jogo.php" method="POST">
