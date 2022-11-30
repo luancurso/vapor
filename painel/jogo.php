@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="assets/global.css">
         <link rel="stylesheet" href="assets/normalize.css">
         <link rel="stylesheet" href="assets/style.css">
+        <script src="assets/scripts.js"></script>
         <title>Vapor - <?=$titulo_pagina?></title>
     </head>
     <body>
@@ -44,7 +45,7 @@
                             <td class="actions"><a href="idioma-jogo.php?id=<?=$jogo['id']?>"><img src="./public/icons/idioma-jogo.png" alt="idioma"></a></td>
                             <td class="actions"><a href="plataforma-jogo.php?id=<?=$jogo['id']?>"><img src="./public/icons/plataforma-jogo.png" alt="plataforma"></a></td>
                             <td class="actions"><a href="editar-jogo.php?id=<?=$jogo['id']?>"><img src="./public/icons/editar.png" alt="excluir"></a></td>
-                            <td class="actions"><a href="excluir-jogo.php?id=<?=$jogo['id']?>"><img src="./public/icons/lixeira.png" alt="excluir"></a></td>
+                            <td class="actions"><a onclick="excluirJogo(<?=$jogo['id']?>)"href=#><img src="./public/icons/lixeira.png" alt="excluir"></a></td>
                         </tr>
                         <?php } ?>
                     </table> 
