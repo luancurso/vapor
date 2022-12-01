@@ -37,7 +37,7 @@
                         <tr>
                             <td><?=$idioma['nome']?></td>
                             <td class="actions"><a href="editar-idioma.php?id=<?=$idioma['id']?>"><img src="./public/icons/editar.png" alt="excluir"></a></td>
-                            <td class="actions"><a href="excluir-idioma.php?id=<?=$idioma['id']?>"><img src="./public/icons/lixeira.png" alt="excluir"></a></td>
+                            <td class="actions"><a onclick="excluirIdioma(<?=$idioma['id']?>)" href="#"><img src="./public/icons/lixeira.png" alt="excluir"></a></td>
                         </tr>
                         <?php } ?>
                     </table> 
