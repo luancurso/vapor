@@ -35,3 +35,11 @@ function excluirIdioma(idIdioma){
         window.open("excluir-idioma.php?id=" + idIdioma, "_SELF")
     }
 }
+
+function excluirPlataforma(idPlataforma){
+    let excluirPlataforma = confirm("Realmente deseja excluir esse Plataforma ?")
+
+    if (excluirPlataforma == true){
+        window.open("excluir-plataforma.php?id=" + idPlataforma, "_SELF")
+    }
+}
