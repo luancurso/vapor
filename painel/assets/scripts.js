@@ -43,3 +43,11 @@ function excluirPlataforma(idPlataforma){
         window.open("excluir-plataforma.php?id=" + idPlataforma, "_SELF")
     }
 }
+
+function excluirCategoria(idCategoria){
+    let excluirCategoria = confirm("Realmente deseja excluir esse Categoria ?")
+
+    if (excluirCategoria == true){
+        window.open("excluir-categoria.php?id=" + idCategoria, "_SELF")
+    }
+}

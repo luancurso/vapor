@@ -37,7 +37,7 @@
                         <tr>
                             <td><?=$categoria['nome']?></td>
                             <td class="actions"><a href="editar-categoria.php?id=<?=$categoria['id']?>"><img src="./public/icons/editar.png" alt="editar"></a></td>
-                            <td class="actions"><a href="excluir-categoria.php?id=<?=$categoria['id']?>"><img src="./public/icons/lixeira.png" alt="excluir"></a></td>
+                            <td class="actions"><a onclick="excluirCategoria(<?=$categoria['id']?>)"href="#"><img src="./public/icons/lixeira.png" alt="excluir"></a></td>
                         </tr>
                         <?php } ?>
                     </table> 
