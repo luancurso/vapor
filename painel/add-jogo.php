@@ -16,7 +16,7 @@
         <script src="assets/scripts.js"></script>
         <title>Vapor - <?=$titulo_pagina?></title>
     </head>
-    <body onload="removeErrorMensagem()">
+    <body>
         <div id="cont-dashboard">
             <?php require('./modulos/side-menu.php')?>
             <div id="sub-dashboard">
@@ -25,12 +25,12 @@
                 $query_categoria = mysqli_query($conn, $id_categoria);
                 ?>
                 <?php if($error != null){?>
-                    <div class="error" ><?=$error?></div>
+                    <div class="error" id="error" ><?=$error?></div>
                 <?php } ?>
                 <div class="forms">
                     <form action="cadastro-jogo.php" method="POST">
                         <div class="info">
-                            <label for="name">Nome</label>
+                            <label for="name" id="error" onclick="removerElementoPorId('error')">Nome</label>
                             <input type="text" name="name">
                         </div>
                         <div class="info">

@@ -15,6 +15,7 @@
         <p>Olá, <?=explode("de", $administrador['nome'])[0]?></p>
         <span>|</span>
         <a href="logout.php" id="logout">Logout</a>
+        <h3 id="relogio"></h3>
     </div>
 </header>
 

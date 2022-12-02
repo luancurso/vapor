@@ -27,7 +27,7 @@
                     <form action="cadastro-categoria.php" method="POST">
                         <div class="info">
                             <label for="nova_categoria">categoria</label>
-                            <input type="text" name="nova_categoria">
+                            <input type="text" name="nova_categoria" onclick="removerElementoPorId('erro-categoria')">
                             <?php if($error_categoria != null){?>
                             <div id="erro-categoria"><?=$error_categoria?></div>
                             <?php } ?>

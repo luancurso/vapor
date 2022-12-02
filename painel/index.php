@@ -21,7 +21,7 @@
                 <img src="public/icons/login.png" alt="login_image" id="img_login">
                 <div class="campo_login">
                     <img src="public/icons/email.png" alt="email" class="img_login">
-                    <input type="email" placeholder="E-mail" name="email_login" class="input_login" required onfocus="removeErrorMensagemPainel()">
+                    <input type="email" placeholder="E-mail" name="email_login" class="input_login" required onfocus="removerElementoPorId('error_message')">
                 </div>
                 <div class="campo_login">
                     <img src="public/icons/lock.png" alt="lock" class="img_login">

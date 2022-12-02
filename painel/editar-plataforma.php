@@ -17,7 +17,7 @@
         <script src="assets/scripts.js"></script>
         <title>Vapor - <?=$titulo_pagina?></title>
     </head>
-    <body onload="removeErrorMensagem()">
+    <body>
         <div id="cont-dashboard">
             <?php require('./modulos/side-menu.php')?>
             <div id="sub-dashboard">
@@ -30,10 +30,10 @@
                     <form action="atualizar-plataforma.php" method="POST">
                         <div class="info">
                         <label for="plataforma">Plataforma</label>
-                        <input value="<?=$plataforma['nome']?>" type="text" name="plataforma">
+                        <input value="<?=$plataforma['nome']?>" type="text" name="plataforma" onclick="onclick=removerElementoPorId('error')">
                         <input value="<?=$id?>" type="hidden" name="id">
                         <?php if($error_plataforma != null){?>
-                        <div class="error"><?=$error_plataforma?></div>
+                        <div class="error" id="error"><?=$error_plataforma?></div>
                         <?php } ?>
                         <button>Atualizar</button>
                         </div>

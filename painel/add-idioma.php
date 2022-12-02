@@ -25,9 +25,9 @@
                     <form action="cadastro-idioma.php" method="POST">
                         <div class="info">
                             <label for="novo_idioma">Idioma</label>
-                            <input type="text" name="novo_idioma">
+                            <input type="text" name="novo_idioma" onclick="removerElementoPorId('erro-idioma')">
                             <?php if($error_idioma != null){?>
-                            <div id="erro-idioma"><?=$error_idioma?></div>
+                            <div id="erro-idioma" id="erro-idioma"><?=$error_idioma?></div>
                             <?php } ?>
                             <button>Salvar</button>
                         </div>

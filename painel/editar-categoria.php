@@ -29,10 +29,10 @@
                 <div class="forms">
                     <form action="atualizar-categoria.php" method="POST">
                         <label for="categoria">Categoria</label>
-                        <input value="<?=$categoria['nome']?>" type="text" name="categoria">
+                        <input value="<?=$categoria['nome']?>" type="text" name="categoria" onclick="removerElementoPorId('error')">
                         <input value="<?=$id?>" type="hidden" name="id">
                         <?php if($error_categoria != null){?>
-                        <div class="error"><?=$error_categoria?></div>
+                        <div class="error" id="error"><?=$error_categoria?></div>
                         <?php } ?>
                         <button>Atualizar</button>
                     </form>
