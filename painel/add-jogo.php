@@ -5,16 +5,16 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="assets/global.css">
-        <link rel="stylesheet" href="assets/normalize.css">
-        <link rel="stylesheet" href="assets/style.css">
-        <script src="assets/scripts.js"></script>
-        <title>Vapor - <?=$titulo_pagina?></title>
+    <head>         
+        <meta charset="UTF-8">         
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+        <link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">         
+        <link rel="stylesheet" href="assets/global.css">         
+        <link rel="stylesheet" href="assets/normalize.css">         
+        <link rel="stylesheet" href="assets/style.css">  
+        <script src=./assets/scripts.js></script>     
+        <title>Vapor - <?=$titulo_pagina?></title>     
     </head>
     <body>
         <div id="cont-dashboard">
@@ -24,14 +24,11 @@
                 $id_categoria = "SELECT * FROM categoria";
                 $query_categoria = mysqli_query($conn, $id_categoria);
                 ?>
-                <?php if($error != null){?>
-                    <div class="error" id="error" ><?=$error?></div>
-                <?php } ?>
                 <div class="forms">
                     <form action="cadastro-jogo.php" method="POST">
                         <div class="info">
-                            <label for="name" id="error" onclick="removerElementoPorId('error')">Nome</label>
-                            <input type="text" name="name">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="input_prin" onfocus="removeElementoPorId('error')">
                         </div>
                         <div class="info">
                             <label for="price">Valor</label>
@@ -62,6 +59,9 @@
                                 <?php }?>
                             </select>
                             <button type="submit">Salvar</button>
+                            <?php if($error != null){?>
+                                <div class="error" id="error"><?=$error?></div>
+                            <?php } ?>
                         </div>  
                         <div class="info">
                             <label for="description">Descrição</label>

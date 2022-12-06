@@ -6,16 +6,16 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="assets/global.css">
-        <link rel="stylesheet" href="assets/normalize.css">
-        <link rel="stylesheet" href="assets/style.css">
-        <script src="assets/scripts.js"></script>
-        <title>Vapor - <?=$titulo_pagina?></title>
+    <head>         
+        <meta charset="UTF-8">         
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+        <link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">         
+        <link rel="stylesheet" href="assets/global.css">         
+        <link rel="stylesheet" href="assets/normalize.css">         
+        <link rel="stylesheet" href="assets/style.css">  
+        <script src=./assets/scripts.js></script>     
+        <title>Vapor - <?=$titulo_pagina?></title>     
     </head>
     <body>
         <div id="cont-dashboard">
@@ -28,13 +28,15 @@
                 ?>
                 <div class="forms">
                     <form action="atualizar-idioma.php" method="POST">
-                        <label for="novo_idioma">Idioma</label>
-                        <input value="<?=$idioma['nome']?>" type="text" name="idioma" onclick="removerElementoPorId('error')">
-                        <input value="<?=$id?>" type="hidden" name="id">
-                        <?php if($error_idioma != null){?>
-                        <div class="error" id="error"><?=$error_idioma?></div>
-                        <?php } ?>
-                        <button>Atualizar</button>
+                        <div class="info">
+                            <label for="novo_idioma">Idioma</label>
+                            <input value="<?=$idioma['nome']?>" type="text" name="idioma" id="input_prin" onfocus="removeElementoPorId('error')">
+                            <input value="<?=$id?>" type="hidden" name="id">
+                            <button>Atualizar</button>
+                            <?php if($error_idioma != null){?>
+                            <div class="error" id="error"><?=$error_idioma?></div>
+                            <?php } ?>
+                        </div>
                     </form>
                 </div>
             </div>
