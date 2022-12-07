@@ -28,7 +28,7 @@
                     <form action="cadastro-jogo.php" method="POST">
                         <div class="info">
                             <label for="name">Nome</label>
-                            <input type="text" name="name" id="input_prin" onfocus="removeElementoPorId('error')">
+                            <input type="text" name="name" id="input_prin" onfocus="removeElementoPorId('error')" onkeyup="capsLock(this)">
                         </div>
                         <div class="info">
                             <label for="price">Valor</label>

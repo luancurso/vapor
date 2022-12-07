@@ -25,7 +25,7 @@
                     <form action="cadastro-categoria.php" method="POST">
                         <div class="info">
                             <label for="nova_categoria">categoria</label>
-                            <input type="text" name="nova_categoria" id="input_prin" onfocus="removeElementoPorId('error')" >
+                            <input type="text" name="nova_categoria" id="input_prin" onfocus="removeElementoPorId('error')"  onkeyup="capsLock(this)">
                             <button>Salvar</button>
                             <?php if($error_categoria != null){?>
                                 <div class="error" id="error"><?=$error_categoria?></div>

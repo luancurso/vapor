@@ -25,7 +25,7 @@
                     <form action="cadastro-plataforma.php" method="POST">
                         <div class="info">
                             <label for="nova_plataforma">Plataforma</label>
-                            <input type="text" name="nova_plataforma">
+                            <input type="text" name="nova_plataforma" onkeyup="primeira_capslock(this)">
                             <button>Salvar</button>
                             <?php if($error_plataforma != null){?>
                             <div class="error" id="error"><?=$error_plataforma?></div>

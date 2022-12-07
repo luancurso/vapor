@@ -27,7 +27,7 @@ $error_idioma = $_GET['error_idioma'] ?? null;
                 <form action="cadastro-idioma.php" method="POST">
                     <div class="info">
                         <label for="novo_idioma">Idioma</label>
-                        <input type="text" name="novo_idioma">
+                        <input type="text" name="novo_idioma" onkeyup="primeira_capslock(this)">
                         <button>Salvar</button>
                         <?php if ($error_idioma != null) { ?>
                             <div class="error" id="error"><?= $error_idioma ?></div>

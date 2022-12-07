@@ -102,3 +102,14 @@ function upperCaseInput(){
     let inputUpper = document.getElementById("input_prin")
     console.log(inputUpper)
 }
+
+function capsLock(elemento){
+
+    elemento.value = elemento.value.toUpperCase()
+} 
+
+function primeira_capslock(elemento){
+    elemento.value = elemento.value[0].toUpperCase() + elemento.value.slice(1).toLowerCase()
+}
+
+ 
